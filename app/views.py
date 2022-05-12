@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from app.models import Mutter
 
 
@@ -7,11 +7,12 @@ def mutter_list(request):
     if request.method == 'POST':
         mutter = Mutter.objects.create(content=request.POST.get("content", ""))
         mutter.save()
+        redirect('mutter_list')
 
     keyword = request.GET.get(key="keyword", default=None)
 
     if keyword:
-        mutters = Mutter.objects.filter(content__contains=keyword).order_by("created_at").reverse()
+        mutters = Mutter.objects.filter(content__icontains=keyword).order_by("created_at").reverse()
     else:
         mutters = Mutter.objects.all().order_by("created_at").reverse()
 
