@@ -12,9 +12,9 @@ def mutter_list(request):
     keyword = request.GET.get(key="keyword", default=None)
 
     if keyword:
-        mutters = Mutter.objects.filter(content__contains=keyword).order_by("created_at").reverse()
+        mutters = Mutter.objects.filter(content__contains=keyword).order_by("created_at")
     else:
-        mutters = Mutter.objects.all().order_by("created_at").reverse()
+        mutters = Mutter.objects.all().order_by("created_at")
 
     return render(request, 'mutter_list.html', dict(mutters=mutters))
 
