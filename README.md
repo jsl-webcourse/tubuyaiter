@@ -1,4 +1,4 @@
-# Python講座 デプロイハンズオン向け Djangoアプリ
+# ハイツ−システム様向け Python講座 デプロイハンズオン向け Djangoアプリ
 ## つぶやきアプリ（tubuyaiter）
 =========
 
@@ -7,14 +7,24 @@
 - Django 3.1.1
 
 ## 前準備
-仮想環境を作成し、以下を実行します。
+ソースコードのCloneをします。
+```
+$ git clone https://github.com/jsl-webcourse-hi2/tubuyaiter.git
+```
 
+仮想環境を作成し、以下を実行します。
 venvの場合
 ```
+$ cd tubuyaiter
 $ python3.8 -m venv env 
 $ source env/bin/activate
 ```
 
 ```
 $ pip install -r requirements.txt
+```
+
+マイグレーションをする
+```
+$ python manage.py migrate
 ```
