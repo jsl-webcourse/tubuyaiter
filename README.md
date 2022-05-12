@@ -9,7 +9,7 @@
 ## 前準備
 ソースコードのCloneをします。
 ```
-$ git clone https://github.com/jsl-webcourse/tubuyaiter.git
+$ git clone https://github.com/jsl-webcourse-hi2/tubuyaiter.git
 ```
 
 仮想環境を作成し、以下を実行します。
