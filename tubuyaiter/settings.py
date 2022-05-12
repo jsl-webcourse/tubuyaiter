@@ -85,10 +85,8 @@ WSGI_APPLICATION = 'tubuyaiter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'tubuyaiter',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -131,11 +129,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-try:
-    from tubuyaiter.local_settings import *
-except ImportError:
-    pass
-
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())
