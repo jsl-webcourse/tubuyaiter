@@ -28,3 +28,13 @@ $ pip install -r requirements.txt
 ```
 $ python manage.py migrate
 ```
+
+管理者作成
+```
+$ python manage.py createsuperuser
+```
+
+アプリ起動
+```
+$ python manage.py runserver
+```
