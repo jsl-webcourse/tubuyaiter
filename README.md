@@ -16,7 +16,7 @@ $ git clone https://github.com/jsl-webcourse-hi2/tubuyaiter.git
 venvの場合
 ```
 $ cd tubuyaiter
-$ python3 -m venv env 
+$ python -m venv env 
 $ source env/bin/activate
 ```
 
